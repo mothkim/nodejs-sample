@@ -1,3 +1,5 @@
 FROM node:latest
-RUN npm install
+WORKDIR /app
+COPY . .
+RUN npm install express
 CMD ["node" ,"index.js"]
